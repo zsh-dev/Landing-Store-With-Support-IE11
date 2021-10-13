@@ -1,0 +1,176 @@
+.catalog {
+    padding: 37px 0 83px;
+
+    &__sort {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    &__sort-text {
+        font-weight: bold;
+        margin-right: 48px;
+    }
+
+    &__sort-btn {
+        position: relative;
+        padding-right: 29px;
+        background: url(../img/icons/arrow.svg) center right no-repeat;
+        transition: color .5s;
+
+        &:last-child {
+            margin-left: 55px;
+        }
+
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 68px;
+    }
+
+    &__card {
+        flex-basis: calc(33.333% - 14px);
+        margin-right: 20px;
+        margin-bottom: 23px;
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+
+        &:nth-child(n + 4) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__wrap {
+        text-align: center;
+    }
+
+    &__btn {
+        height: 65px;
+        border: 1px solid #CACACA;
+        border-radius: 10px;
+        padding: 5px 129px;
+        font-size: 14px;
+        line-height: 17px;
+        background-color: transparent;
+        transition: all .5s;
+        &:hover {
+            background-color: $accent;
+            color: #fff;
+        }
+    }
+
+}
+
+.card {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+
+    &__img {
+        height: 265px;
+
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__descr {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        background-color: #F3F3F3;
+        padding: 29px;
+
+    }
+
+    &__title {
+        flex-grow: 1;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 24px;
+        transition: color .5s;
+        a {
+            width: 100%;
+        }
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    &__text {
+
+        font-size: 12px;
+        line-height: 15px;
+
+        &_border {
+            max-width: 110px;
+            display: inline-flex;
+            align-items: center;
+            padding-left: 18px;
+            border-left: 4px solid $accent;
+        }
+    }
+
+    &__data {
+        max-width: 70px;
+    }
+
+    &__num {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    &__price {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .btn {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    .label-discount {
+        display: none;
+    }
+
+    .btn_disabled {
+        display: none;
+    }
+
+    &_discount {
+        .label-discount {
+            display: inline-block;
+        }
+    }
+
+    &_sold {
+        .card__btn {
+            display: none;
+        }
+
+        .btn_disabled {
+            display: block;
+        }
+    }
+}
